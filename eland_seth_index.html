@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ElandSeth Trading (PTY) LTD - Professional Maintenance Services in South Africa</title>
+  <meta name="description" content="Professional maintenance services in South Africa. Expert roofing solutions, solar installation, electrical, plumbing, waterproofing, and building contractors. One-stop maintenance shop.">
+  <meta name="keywords" content="maintenance services South Africa, professional solar installation, expert roofing solutions, reliable plumbing services, electrical backup power installation, high-quality building contractors, waterproofing, professional maintenance">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    /* Custom CSS for ElandSeth Trading */
+    :root {
+      --primary-color: #075e33;
+      --secondary-color: #99c740;
+      --white: #ffffff;
+      --light-gray: #f8f9fa;
+      --dark-gray: #343a40;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .topbar {
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 10px 0;
+    }
+
+    .topbar a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--secondary-color);
+    }
+
+    .navbar {
+      padding: 15px 0;
+    }
+
+.navbar-logo-large {
+  width: 100px;  /* controls logo width only */
+  height: auto;  /* keeps aspect ratio */
+  display: block; /* optional: ensures no weird spacing */
+}
+
+
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color) !important;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .navbar-logo {
+      height: 50px;
+      width: auto;
+      margin-right: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand:hover .navbar-logo {
+      transform: scale(1.1);
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--primary-color) !important;
+      font-weight: 500;
+      margin: 0 15px;
+      padding: 10px 0 !important;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--secondary-color) !important;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary-color);
+      transition: width 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Hero Section with Slideshow */
+    .hero {
+      position: relative;
+      padding: 150px 0 100px;
+      margin-top: 120px;
+      overflow: hidden;
+      min-height: 70vh;
+    }
+
+    .hero-slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-slide::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(7, 94, 51, 0.8) 0%, rgba(153, 199, 64, 0.8) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .hero-nav {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 3;
+    }
+
+    .hero-nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .hero-nav-dot.active,
+    .hero-nav-dot:hover {
+      background: var(--white);
+      transform: scale(1.2);
+    }
+
+    .hero-arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--white);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .hero-arrows:hover {
+      background: var(--secondary-color);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .hero-arrow-left {
+      left: 30px;
+    }
+
+    .hero-arrow-right {
+      right: 30px;
+    }
+
+    .btn-primary {
+      background: var(--secondary-color);
+      border: none;
+      padding: 15px 30px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      border: 2px solid var(--white);
+      padding: 15px 30px;
+      font-weight: 600;
+      border-radius: 50px;
+      margin-left: 20px;
+    }
+
+    .btn-outline-light:hover {
+      background: var(--white);
+      color: var(--primary-color);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 100px 0;
+      background: var(--light-gray);
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      height: 100%;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--secondary-color);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      background: var(--secondary-color);
+      color: var(--white);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      font-size: 2rem;
+    }
+
+    .service-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .section-title h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .section-title p {
+      color: var(--dark-gray);
+      font-size: 1.1rem;
+    }
+
+    .portfolio-item {
+      background: var(--white);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .portfolio-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .portfolio-images img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .portfolio-content {
+      padding: 30px;
+    }
+
+    .portfolio-category {
+      background: var(--secondary-color);
+      color: var(--white);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-title {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .before-after-labels {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .ba-label {
+      background: rgba(0,0,0,0.7);
+      color: var(--white);
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* Team Section */
+    .team {
+      padding: 100px 0;
+      background: var(--light-gray);
+    }
+
+    .team-card {
+      background: var(--white);
+      border-radius: 15px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .team-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 25px;
+      background: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 3rem;
+    }
+
+    .team-name {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .team-role {
+      color: var(--secondary-color);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 100px 0;
+      background: var(--light-gray);
+    }
+
+    .contact-wrapper {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      min-height: 700px;
+    }
+
+    .contact-info-panel {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: var(--white);
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-info-header h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .contact-info-header p {
+      opacity: 0.9;
+      margin-bottom: 40px;
+    }
+
+    .contact-info-cards {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .info-card {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+
+    .info-card:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateX(10px);
+    }
+
+    .icon-container {
+      background: var(--white);
+      color: var(--primary-color);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-content h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .card-content p {
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    .social-links-panel {
+      margin-top: 30px;
+    }
+
+    .social-links-panel h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      background: rgba(255,255,255,0.2);
+      color: var(--white);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background: var(--white);
+      color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .contact-form-panel {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map-container {
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .form-container {
+      padding: 50px 40px;
+      flex: 1;
+    }
+
+    .form-container h3 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .form-container p {
+      color: var(--dark-gray);
+      margin-bottom: 40px;
+    }
+
+    .form-floating label {
+      color: var(--dark-gray);
+    }
+
+    .form-control {
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 1rem;
+      transition: all 0.3s;
+      background: transparent;
+    }
+
+    .form-control:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 0.2rem rgba(153, 199, 64, 0.25);
+      background: transparent;
+    }
+
+    .form-floating > .form-control:focus ~ label {
+      color: var(--secondary-color);
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: var(--white);
+      border: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(7, 94, 51, 0.3);
+    }
+
+    .loading, .error-message, .sent-message {
+      display: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .loading {
+      background: #e7f3ff;
+      color: #0066cc;
+    }
+
+    .error-message {
+      background: #ffe7e7;
+      color: #cc0000;
+    }
+
+    .sent-message {
+      background: #e7ffe7;
+      color: #00cc00;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 60px 0 20px;
+    }
+
+    .footer h5 {
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+
+    .footer a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-links a {
+      background: var(--secondary-color);
+      color: var(--white);
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      background: var(--white);
+      color: var(--primary-color);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-info-panel {
+        order: 2;
+      }
+      
+      .contact-form-panel {
+        order: 1;
+      }
+      
+      .map-container {
+        height: 200px;
+      }
+
+      .hero-arrows {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .btn-outline-light {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+      
+      .portfolio-images {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-container {
+        padding: 30px 25px;
+      }
+      
+      .contact-info-panel {
+        padding: 40px 25px;
+      }
+
+      .navbar-brand {
+        font-size: 1.4rem;
+      }
+
+      .navbar-logo {
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-envelope me-2"></i>
+              <a href="mailto:info@elandsethtrading.co.za">info@elandsethtrading.co.za</a>
+              <i class="bi bi-telephone ms-4 me-2"></i>
+              <a href="tel:+27123456789">+27 12 345 6789</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-end d-none d-md-block">
+            <div class="social-links">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+<a class="navbar-brand" href="#home">
+  <img src="img/logo.png" alt="ElandSeth Trading Logo" class="navbar-logo-large">
+</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Our Engineers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+   <!-- Hero Section with Slideshow -->
+<section id="home" class="hero">
+  <!-- Slideshow Container -->
+  <div class="hero-slideshow">
+    <!-- Slide 1 -->
+    <div class="hero-slide active" style="background-image: url('img/electrical.jpg')"></div>
+    <!-- Slide 2 -->
+    <div class="hero-slide" style="background-image: url('img/scafford.jpg')"></div>
+    <!-- Slide 3 -->
+    <div class="hero-slide" style="background-image: url('img/solar.jpg')"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content container text-center">
+    <h1>Professional Maintenance Services</h1>
+    <p class="subtitle">Your trusted partner in roofing, solar, electrical, and more.</p>
+    <a href="#services" class="btn btn-primary">Our Services</a>
+    <a href="#contact" class="btn btn-outline-light">Contact Us</a>
+  </div>
+</section>
+
+<script>
+  // Slideshow logic
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".hero-slide");
+  const totalSlides = slides.length;
+
+  function showNextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % totalSlides;
+    slides[currentSlide].classList.add("active");
+  }
+
+  // Change slide every 5 seconds
+  setInterval(showNextSlide, 5000);
+</script>
+
+<style>
+  /* Adjusted slideshow style */
+  .hero-slideshow {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+  }
+
+  .hero-slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  /* Removed the green overlay */
+  .hero-slide::before {
+    display: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  }
+</style>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="section-title text-start mb-5">
+              <h2>Why Choose ElandSeth Trading?</h2>
+              <p>With years of experience in the maintenance industry, we've built our reputation on quality workmanship, reliability, and customer satisfaction.</p>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="d-flex">
+                  <div class="service-icon me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    <i class="bi bi-award"></i>
+                  </div>
+                  <div>
+                    <h5>Expert Craftsmanship</h5>
+                    <p>Skilled professionals with proven track records</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="d-flex">
+                  <div class="service-icon me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div>
+                    <h5>Reliable Service</h5>
+                    <p>Dependable maintenance solutions you can trust</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="text-center">
+              <div class="bg-light p-5 rounded-3">
+                <h3 class="text-primary mb-4">Our Mission</h3>
+                <p class="lead">To provide comprehensive, high-quality maintenance services that enhance the safety, efficiency, and value of your property while exceeding customer expectations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Professional Services</h2>
+          <p>Comprehensive maintenance solutions for residential, commercial, and industrial properties</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h3>Backup System Installation</h3>
+              <p>Professional backup power installation with inverters, batteries, and solar integration. Ensure uninterrupted power supply for your home or business with our reliable backup systems.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-house"></i>
+              </div>
+              <h3>Roof Construction</h3>
+              <p>Expert roofing solutions including new roof installation, repairs, maintenance, and waterproofing. We use high-quality materials to ensure durability and weather resistance.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-sun"></i>
+              </div>
+              <h3>Solar Installation</h3>
+              <p>Professional solar installation services with premium solar panels, inverters, and mounting systems. Reduce your electricity costs with our sustainable energy solutions.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-droplet"></i>
+              </div>
+              <h3>Waterproofing</h3>
+              <p>Comprehensive waterproofing solutions for roofs, basements, bathrooms, and exterior walls. Protect your property from water damage with our proven waterproofing techniques.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-plug"></i>
+              </div>
+              <h3>Electrical Services</h3>
+              <p>Licensed electrical contractors providing installation, repair, and maintenance services. From rewiring to electrical compliance certificates, we ensure safety and reliability.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-wrench"></i>
+              </div>
+              <h3>Plumbing Services</h3>
+              <p>Reliable plumbing services including installation, repairs, drain cleaning, and bathroom renovations. Our skilled plumbers deliver quality workmanship for all your plumbing needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Portfolio</h2>
+      <p>See the transformation - Before & After showcase of our professional maintenance projects</p>
+    </div>
+
+    <div class="row">
+      <!-- Roof Construction -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <div class="position-relative">
+            <div class="portfolio-images">
+              <img src="img/cottage.jpg"" alt="Before - Old Roof">
+              <img src="img/cottage.jpg"" alt="After - New Roof">
+            </div>
+            <div class="before-after-labels">
+              <span class="ba-label">Before</span>
+              <span class="ba-label">After</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Roof Construction</span>
+            <h4 class="portfolio-title">Complete Roof Replacement</h4>
+            <p>Transformed an old, leaking roof into a modern, weather-resistant structure. Used premium materials for long-lasting protection and improved property value.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solar Installation -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <div class="position-relative">
+            <div class="portfolio-images">
+              <img src="img/residential_solar.jpg" alt="Before - No Solar">
+              <img src="img/residential_solar.jpg" alt="After - Solar Installed">
+            </div>
+            <div class="before-after-labels">
+              <span class="ba-label">Before</span>
+              <span class="ba-label">After</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Solar Installation</span>
+            <h4 class="portfolio-title">Residential Solar System</h4>
+            <p>Installed a 10kW solar system with backup batteries. Client now saves 80% on electricity bills while contributing to environmental sustainability.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Waterproofing -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <div class="position-relative">
+            <div class="portfolio-images">
+              <img src="img/leaking.jpeg" alt="Before - Water Damage">
+              <img src="img/basement_water_proofing.jpg" alt="After - Waterproofed">
+            </div>
+            <div class="before-after-labels">
+              <span class="ba-label">Before</span>
+              <span class="ba-label">After</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Waterproofing</span>
+            <h4 class="portfolio-title">Basement Waterproofing - Durban</h4>
+            <p>Eliminated persistent water damage with comprehensive waterproofing solution. Property now protected from moisture and structural damage.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Electrical Upgrade -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <div class="position-relative">
+            <div class="portfolio-images">
+              <img src="img/backup_system.jpg" alt="Before - Old Wiring">
+              <img src="img/backup_system.jpg" alt="After - Modern Electrical">
+            </div>
+            <div class="before-after-labels">
+              <span class="ba-label">Before</span>
+              <span class="ba-label">After</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <span class="portfolio-category">Electrical Services</span>
+            <h4 class="portfolio-title">Complete Electrical Upgrade - Pretoria</h4>
+            <p>Upgraded outdated electrical system with modern wiring, distribution board, and safety features. Now meets all current electrical compliance standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Expert Engineers</h2>
+          <p>Meet our skilled team of professional engineers and technicians dedicated to delivering exceptional maintenance services</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="team-card">
+              <div class="team-avatar">
+                <i class="bi bi-person"></i>
+              </div>
+              <h4 class="team-name">John Smith</h4>
+              <p class="team-role">Lead Solar Engineer</p>
+              <p>15+ years experience in solar installation and renewable energy systems. Certified solar PV installer and project manager.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="team-card">
+              <div class="team-avatar">
+                <i class="bi bi-person"></i>
+              </div>
+              <h4 class="team-name">Sarah Johnson</h4>
+              <p class="team-role">Electrical Engineer</p>
+              <p>Licensed electrical engineer specializing in residential and commercial electrical installations, backup systems, and compliance.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="team-card">
+              <div class="team-avatar">
+                <i class="bi bi-person"></i>
+              </div>
+              <h4 class="team-name">Mike Williams</h4>
+              <p class="team-role">Roofing Specialist</p>
+              <p>Master craftsman with 20+ years in roofing construction, repairs, and waterproofing. Expert in all roofing materials and techniques.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="team-card">
+              <div class="team-avatar">
+                <i class="bi bi-person"></i>
+              </div>
+              <h4 class="team-name">David Brown</h4>
+              <p class="team-role">Plumbing Engineer</p>
+              <p>Certified plumbing engineer with expertise in residential and commercial plumbing systems, renovations, and emergency repairs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- Key Projects Section -->
+<section id="key-projects" class="key-projects">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Key Projects</h2>
+      <p>Showcasing our expertise in diverse maintenance and installation projects across South Africa</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Project 1: University of Mpumalanga -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/mp_uni.jpg" alt="University of Mpumalanga Project" class="img-fluid">
+            <div class="project-overlay">
+              <span class="project-category">General Maintenance</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">University of Mpumalanga - Under subcontract Thyme Engineering</h3>
+            
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="bi bi-building"></i>
+                <div>
+                  <span class="detail-label">Client:</span>
+                  <span class="detail-value">University of Mpumalanga</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-calendar"></i>
+                <div>
+                  <span class="detail-label">Date:</span>
+                  <span class="detail-value">2023-2024</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-people"></i>
+                <div>
+                  <span class="detail-label">Partners:</span>
+                  <span class="detail-value">Thyme Engineering</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <span class="detail-label">Location:</span>
+                  <span class="detail-value">Mpumalanga</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-overview">
+              <h5>Project Scope</h5>
+              <ul class="project-features">
+                <li>Student residence painting</li>
+                <li>Balustrades installation and maintenance</li>
+                <li>General maintenance services</li>
+              </ul>
+              <p>Comprehensive maintenance solution for university facilities, ensuring safe and aesthetically pleasing student accommodations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Kabokweni Cida -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/kabokweni.jpg" alt="Solar Backup Installation" class="img-fluid">
+            <div class="project-overlay">
+              <span class="project-category">Solar Installation</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Kabokweni Cida - 12kVA Inverter Installation</h3>
+            
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="bi bi-building"></i>
+                <div>
+                  <span class="detail-label">Client:</span>
+                  <span class="detail-value">Cida / Beneficiary Mpho</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-calendar"></i>
+                <div>
+                  <span class="detail-label">Date:</span>
+                  <span class="detail-value">2023</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-lightning-charge"></i>
+                <div>
+                  <span class="detail-label">System:</span>
+                  <span class="detail-value">12kVA Inverter + Solar Backup</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <span class="detail-label">Location:</span>
+                  <span class="detail-value">Kabokweni</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-overview">
+              <h5>Project Scope</h5>
+              <p>Complete installation of a 12kVA inverter system with solar backup for reliable power supply. This project provided sustainable energy solutions to support daily operations and reduce electricity costs.</p>
+              <p class="project-value">Beneficiary: Mpho</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Mthini Fuel Station -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/service station.jpg" alt="Fuel Station Solar Installation" class="img-fluid">
+            <div class="project-overlay">
+              <span class="project-category">Commercial Solar</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Mthini Fuel Station Nkomazi - Solar Power Solution</h3>
+            
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="bi bi-building"></i>
+                <div>
+                  <span class="detail-label">Client:</span>
+                  <span class="detail-value">Mthini Fuel Station</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-calendar"></i>
+                <div>
+                  <span class="detail-label">Date:</span>
+                  <span class="detail-value">2024</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-lightning-charge"></i>
+                <div>
+                  <span class="detail-label">System:</span>
+                  <span class="detail-value">2 x 15kVA Inverters + Solar</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <span class="detail-label">Location:</span>
+                  <span class="detail-value">Nkomazi</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-overview">
+              <h5>Project Scope</h5>
+              <p>Installation of two 15kVA inverters with comprehensive solar power system for a fuel station. This robust solution ensures uninterrupted power for critical operations, reducing reliance on grid electricity and minimizing operational costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Sandton Irrigation -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/automated_irrigation.jpg" alt="Automated Irrigation System" class="img-fluid">
+            <div class="project-overlay">
+              <span class="project-category">Irrigation Systems</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Sandton - Automated Irrigation System</h3>
+            
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="bi bi-building"></i>
+                <div>
+                  <span class="detail-label">Client:</span>
+                  <span class="detail-value">Private Residence</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-calendar"></i>
+                <div>
+                  <span class="detail-label">Date:</span>
+                  <span class="detail-value">2024</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-droplet"></i>
+                <div>
+                  <span class="detail-label">System:</span>
+                  <span class="detail-value">Automated Irrigation</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <span class="detail-label">Location:</span>
+                  <span class="detail-value">Sandton</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-overview">
+              <h5>Project Scope</h5>
+              <p>Design and installation of a fully automated irrigation system for a premium residential property. The system includes weather-based scheduling, soil moisture sensors, and remote control capabilities for optimal water management and landscape maintenance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Key Projects Section Styles */
+  .key-projects {
+    padding: 100px 0;
+    background: var(--light-gray);
+  }
+
+  .project-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    height: 100%;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+
+  .project-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.05);
+  }
+
+  .project-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .project-category {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .project-content {
+    padding: 30px;
+  }
+
+  .project-title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .project-details {
+    margin-bottom: 20px;
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .detail-item i {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-right: 12px;
+    margin-top: 2px;
+    min-width: 20px;
+  }
+
+  .detail-label {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 5px;
+  }
+
+  .detail-value {
+    color: var(--dark-gray);
+  }
+
+  .project-value {
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+
+  .project-overview h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .project-overview p {
+    color: var(--dark-gray);
+    margin-bottom: 0;
+  }
+  
+  .project-features {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .project-features li {
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-content {
+      padding: 25px 20px;
+    }
+    
+    .project-title {
+      font-size: 1.2rem;
+    }
+    
+    .project-image {
+      height: 200px;
+    }
+  }
+</style>
+
+
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Get In Touch</h2>
+          <p>Ready to start your maintenance project? Contact our expert team for a free consultation and quote.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-panel">
+            <div class="contact-info-header">
+              <h3>Contact Information</h3>
+              <p>Professional maintenance services across South Africa. We're here to help with all your property maintenance needs from solar installation to complete renovations.</p>
+            </div>
+
+            <div class="contact-info-cards">
+              <div class="info-card">
+                <div class="icon-container">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="card-content">
+                  <h4>Our Location</h4>
+                  <p>Mbombela, Mpumalanga<br>South Africa</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="icon-container">
+                  <i class="bi bi-envelope-open-fill"></i>
+                </div>
+                <div class="card-content">
+                  <h4>Email Us</h4>
+                  <p>info@elandsethtrading.co.za</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="icon-container">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="card-content">
+                  <h4>Call Us</h4>
+                  <p>+27 12 345 6789</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="icon-container">
+                  <i class="bi bi-clock-fill"></i>
+                </div>
+                <div class="card-content">
+                  <h4>Working Hours</h4>
+                  <p>Monday - Friday: 7AM - 5PM<br>Saturday: 8AM - 2PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-panel">
+              <h5>Follow Us</h5>
+              <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115358.43924260204!2d30.89845!3d-25.47448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee840a4e0ad2be1%3A0x8b36b27b4b6b1a4a!2sMbombela%2C+South+Africa!5e0!3m2!1sen!2sus!4v1635789012345!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="form-container">
+              <h3>Send Us a Message</h3>
+              <p>Ready for professional maintenance services? Tell us about your project and we'll provide you with a detailed quote and timeline.</p>
+
+              <form class="php-email-form">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="nameInput" name="name" placeholder="Full Name" required>
+                  <label for="nameInput">Full Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="emailInput" name="email" placeholder="Email Address" required>
+                  <label for="emailInput">Email Address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" id="phoneInput" name="phone" placeholder="Phone Number">
+                  <label for="phoneInput">Phone Number</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <select class="form-control" id="serviceInput" name="service" required>
+                    <option value="">Select a Service</option>
+                    <option value="solar">Solar Installation</option>
+                    <option value="roofing">Roof Construction</option>
+                    <option value="electrical">Electrical Services</option>
+                    <option value="plumbing">Plumbing Services</option>
+                    <option value="waterproofing">Waterproofing</option>
+                    <option value="backup">Backup System Installation</option>
+                    <option value="multiple">Multiple Services</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <label for="serviceInput">Service Needed</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" id="messageInput" name="message" rows="5" placeholder="Tell us about your project..." style="height: 120px" required></textarea>
+                  <label for="messageInput">Project Details</label>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">Sending your message...</div>
+                  <div class="error-message">Sorry, there was an error sending your message. Please try again.</div>
+                  <div class="sent-message">Your message has been sent successfully! We'll get back to you within 24 hours.</div>
+                </div>
+
+                <div class="d-grid">
+                  <button type="submit" class="btn-submit">Get Free Quote <i class="bi bi-send-fill ms-2"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>ElandSeth Trading (PTY) LTD</h5>
+          <p>Your trusted partner for professional maintenance services across South Africa. Quality workmanship, reliable service, and customer satisfaction guaranteed.</p>
+          <div class="social-links mt-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Our Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#services">Solar Installation</a></li>
+            <li><a href="#services">Roof Construction</a></li>
+            <li><a href="#services">Electrical Services</a></li>
+            <li><a href="#services">Plumbing Services</a></li>
+            <li><a href="#services">Waterproofing</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt me-2"></i>Mbombela, Mpumalanga</li>
+            <li><i class="bi bi-telephone me-2"></i>+27 12 345 6789</li>
+            <li><i class="bi bi-envelope me-2"></i>info@elandsethtrading.co.za</li>
+          </ul>
+        </div>
+      </div>
+      <hr style="margin: 40px 0 20px; border-color: var(--secondary-color); opacity: 0.3;">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2025 ElandSeth Trading (PTY) LTD. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">Professional Maintenance Services | South Africa</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Contact Form Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.querySelector('.php-email-form');
+      const loadingDiv = document.querySelector('.loading');
+      const errorDiv = document.querySelector('.error-message');
+      const sentDiv = document.querySelector('.sent-message');
+      
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading
+        loadingDiv.style.display = 'block';
+        errorDiv.style.display = 'none';
+        sentDiv.style.display = 'none';
+        
+        // Simulate form submission (replace with actual form handling)
+        setTimeout(() => {
+          loadingDiv.style.display = 'none';
+          
+          // Simulate success (replace with actual validation)
+          const formData = new FormData(contactForm);
+          const name = formData.get('name');
+          const email = formData.get('email');
+          const message = formData.get('message');
+          
+          if (name && email && message) {
+            sentDiv.style.display = 'block';
+            contactForm.reset();
+          } else {
+            errorDiv.style.display = 'block';
+          }
+        }, 2000);
+      });
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+      
+      // Update active navigation link on scroll
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 150;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
